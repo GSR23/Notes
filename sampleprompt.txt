@@ -1,0 +1,59 @@
+Generating Playwright Web Tests using MCP+Copilot: 
+ 
+Step 1: Create test context file 
+1. Inside your project folder, create a new file named: generatewebtest.prompt.md 
+2. Paste the following prompt: 
+ 
+You are a playwright test generator. 
+You are given a scenario and you need to generate a playwright test for it. 
+DO NOT generate test code based on the scenario alone. 
+DO run steps one by one using the tools provided by the Playwright MCP. 
+Only after all steps are completed, emit a Playwright TypeScript test that uses 
+@playwright/test based on message history 
+Save generated test file in the tests directory. 
+Execute the test file and iterate until the test passes. 
+ 
+Step 2: Add context file to Copilot Chat Context 
+In Copilot Chat, use the + icon or context menu to add the context file to chat context. 
+ 
+Step 3: Generate Playwright Test  
+Paste the following message/prompt into the Copilot chat: 
+ 
+Generate a Playwright test for the following scenario: 
+1. Navigate to http://www.automationpractice.pl/index.php 
+2. Search for 'T-shirts' 
+3. Verify the "Faded Short Sleeve T-shirts" in the list.
+
+*******************************************************
+Generating Page Object Model(POM) using MCP+Copilot: 
+ 
+No test context needed. 
+Create a POM model for below steps: 
+1. Navigate to http://www.automationpractice.pl/index.php 
+2. Search for 'T-shirts' 
+3. Verify the "Faded Short Sleeve T-shirts" in the list.
+
+*************************************************************************************
+Generating API Test using MCP+Copilot: 
+ 
+Step 1: Create test context file 
+1. Inside your project folder, create a new file named: generateapicontext.txt 
+2. Paste the following prompt: 
+You are an API test generator using Playwright MCP. 
+Use Playwright's `request` context and `@playwright/test` framework. 
+The test should: - Send HTTP requests to the target API. - Validate the status code, response body, and schema (if applicable). - Use async/await syntax. - Print useful logs for debugging if needed. - Export the test to a `.spec.ts` file under the `/tests` folder. 
+Do not generate test code until all steps are fully explored and validated. 
+
+Step 2: Add context file to Copilot Chat Context 
+In Copilot Chat, use the + icon or context menu to add the context file to chat context.
+
+Step 3: Generate Playwright API Test  
+Paste the following message/prompt into the Copilot chat: 
+ 
+Generate a Playwright API test for the following scenario: 
+1. Define the API endpoint URL: `https://fakestoreapi.com/products/1`. 
+2. Send a GET request to the endpoint. 
+3. Verify the response status is 200. 
+4. Validate the response contains these keys: `id`, `title`, `price`, `category`, and `description`. 
+5. Optionally validate the data types using a JSON Schema (Ajv). 
+6. Log the product title and price to the console.
